@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RifaRiwi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700;6..12,900&family=Poppins:wght@100;300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script defer src="js/app.js" type="module"></script>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+
+    <!-- Header -->
+
+
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Información</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Busqueda</a>
+        </li>
+
+      </ul>
+      <img src="img/RifaRiwi-removebg-preview.png" alt="">
+      <div class="d-flex">
+        <a href="login.html" class="btn btn-outline-light login-boton" type="submit">Login</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+    
+
+
+    <!-- banner de info rifa -->
+
+   <main class="container container-banner">
+    
+      <section class="banner">
+
+        <img class="img-banner" src="img/Anuncio de vacante artista 3d.png" alt="">
+
+        <div class="cuadro-2">
+          <p class="fecha">🗓️ Fecha: 1 de Marzo de 2024</p>
+          <p>🍀 La rifa se tomara en marcha el día de presentación del proyecto, será una rifa de 100 boletos y se jugará con la lotería de Medellín. Sé jugará cuando se agoten los boletos. </p>  
+          <h3 class="fecha">¿Cómo Funciona?</h3>  
+          <li>Se eligen los boletos 🎟</li>
+          <li>Se llenan los datos 🥇</li>
+          <li>Se realiza el registro. </li>  
+          <h4>Encargados:</h4> 
+          <p>Estudiantes de Riwi.</p>
+        </div>    
+
+      </section>
+    </main>
+
+
+    <!-- Formulario -->
+
+
+
+    <div class="container containers" >
+        <div class="title">Datos Personales</div>
+        <form id="formulario" method="POST">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Nombre</span>
+                    <input id="nombre" type="text" placeholder="Ingresa tu nombre" >
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Apellidos</span>
+                    <input id="apellidos" type="text" placeholder="Ingresa tu apellido" >
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input id="email" type="text" placeholder="Ingresa tu correo" >
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Numero de telefono</span>
+                    <input id="telefono" type="text" placeholder="Ingresa tu telefono" >
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Direccion de residencia</span>
+                    <input id="direccion" type="text" placeholder="Ingresa tu direccion" >
+                </div>
+            </div>
+
+
+
+            
+
+            <div class="button">
+                <input type="submit" value="Ingresar Datos">
+            </div>
+        </form>
+    </div>
+
+
+
+    <!-- main de los numero a elegir -->
+
+    <div class="container containers">
+
+      <div class="container-boletas">
+        <div class="container-bolertas__info">
+          <h1 class="info-title">Lista de Boletas</h1>
+          <h3>Elige al azar</h3>
+          <p class="minCompra">Compra maxima 10 boletas</p>
+          
+          <span id="valor">1</span>
+          <div class="contador">
+            <button id="decrementar" >-</button>
+            <button id="incrementar">+</button>
+          </div>
+          
+          <h4>Elige boletas manualmente</h4>
+
+          <div class="box-boletas" id="numeros">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Seccion de Busqueda -->
+
+  <div class="container ">
+
+      <div class="row height d-flex justify-content-center align-items-center">
+
+        <div class="col-md-8">
+
+          <div class="search">
+            <i class="fa fa-search"></i>
+            <input type="text" class="form-control" placeholder="Busca tu boleta">
+            <p>Busca con tu C.C o tu codigo que te enviamos</p>
+            <button style="background-color: #29567d; color: #fff;" class="btn">Buscar</button>
+          </div>
+          
+        </div>
+        
+      </div>
+  </div>
+
+<!-- footer -->
+
+
+<!-- Remove the container if you want to extend the Footer to full width. -->
+
+  <footer class="text-center text-white" style="background-color: #f1f1f1;">
+  <!-- Grid container -->
+  <div class="container container-footer  pt-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+     <p style="color: #000000;">Todos los derechos reservados</p>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2024 Copyright:
+    <a class="text-dark" href="https://mdbootstrap.com/">By Riwi</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+  
+<!-- End of .container -->
+
+
+
+
+  <!-- footer -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+.body-form{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    & h1{
+        color: #fff;
+        padding: 3rem;
+        margin: 1rem;
+        background-color: #000000;
+        border-radius: 1rem;
+
+        & span{
+            color: rgb(232, 232, 25);
+        }
+    }
+
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  /* Add your background pattern here */
+  background-image: repeating-radial-gradient(  #4926a2 80%,#2f312f 90%,#3f4549 90%);
+  background-size: 65px 65px;
+}
+
+
+
+.fem{
+
+    background: repeating-linear-gradient(45deg, #0050fc,#0050fc 20px, #0684fade 20px,#0684fade 40px);
+}
+
+.male{
+
+
+    background: #000000;
+    --gap: 5em;
+    --line: 1px;
+    --color: rgba(255, 255, 255, 0.2);
+
+    background-image: linear-gradient(
+        -90deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+        ),
+        linear-gradient(
+        0deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+        );
+    background-size: var(--gap) var(--gap);
+}
+
+.navbar {
+    background-color: #000000;
+    height: 129px;
+    margin: 0px;
+    padding: 0.5rem;
+    font-size: 2.5rem;
+
+}
+
+.tableParticipantes{
+
+  color: #fff;
+  font-size: 1rem;
+  
+
+
+}
