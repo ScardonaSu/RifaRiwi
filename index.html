@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700;6..12,900&family=Poppins:wght@100;300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <script defer src="js/app.js" type="module"></script>
     <link rel="stylesheet" href="css/app.css">
   </head>
@@ -16,36 +18,40 @@
 
     <!-- Header -->
 
+<header>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <div class="container-fluid">
+ 
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         <li class="nav-item">
+           <a class="nav-link active mx-5" aria-current="page" href="#">Inicio</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link mx-5" href="#inscripcion">Inscripcion</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#busqueda">Busqueda</a>
+         </li>
+         
+         
+ 
+       </ul>
+       <img src="img/logoRifa.png" alt="">
+       <div class="d-flex">
+         <a href="login.html" class="btn btn-outline-light login-boton" type="submit">Login</a>
+       </div>
+     </div>
+   </div>
+ </nav>
 
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Información</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Busqueda</a>
-        </li>
-
-      </ul>
-      <img src="img/RifaRiwi-removebg-preview.png" alt="">
-      <div class="d-flex">
-        <a href="login.html" class="btn btn-outline-light login-boton" type="submit">Login</a>
-      </div>
-    </div>
-  </div>
-</nav>
 
 
-
+</header>
     
 
 
@@ -55,7 +61,7 @@
     
       <section class="banner">
 
-        <img class="img-banner" src="img/Anuncio de vacante artista 3d.png" alt="">
+        <img class="img-banner" src="img/imgPrincipal.png" alt="">
 
         <div class="cuadro-2">
           <p class="fecha">🗓️ Fecha: 1 de Marzo de 2024</p>
@@ -76,7 +82,7 @@
 
 
 
-    <div class="container containers" >
+    <div class="container containers" id="inscripcion" >
         <div class="title">Datos Personales</div>
         <form id="formulario" method="POST">
             <div class="user-details">
@@ -106,10 +112,6 @@
                 </div>
             </div>
 
-
-
-            
-
             <div class="button">
                 <input type="submit" value="Ingresar Datos">
             </div>
@@ -136,32 +138,32 @@
           
           <h4>Elige boletas manualmente</h4>
 
-          <div class="box-boletas" id="numeros">
+          <div class="box-boletas" id="numeros" >
 
           </div>
         </div>
       </div>
     </div>
 
-
-
     <!-- Seccion de Busqueda -->
 
-  <div class="container ">
-
+   <div class="container" id="busqueda"> 
       <div class="row height d-flex justify-content-center align-items-center">
-
         <div class="col-md-8">
-
           <div class="search">
             <i class="fa fa-search"></i>
-            <input type="text" class="form-control" placeholder="Busca tu boleta">
-            <p>Busca con tu C.C o tu codigo que te enviamos</p>
-            <button style="background-color: #29567d; color: #fff;" class="btn">Buscar</button>
+            <input type="text" class="form-control" id="codigoA" >
+            <p class="botoncodigo">Encuentra tu boleta con su respectivo número</p>
+            <div class="carta-persona" id="estilosPer">
+                <p id="participante"></p>
+                <p id="apellido"></p>
+                <p id="numBol"></p>
+                <p id="tel"></p>
+            </div>
           </div>
-          
+          <button id="obtenerDatos" style="background-color: #29567d; color: #fff;" class="btn-buscar">Buscar</button>
+          <p class="botoncodigo" id="numerocodigo"></p>
         </div>
-        
       </div>
   </div>
 
@@ -191,7 +193,6 @@
 </footer>
   
 <!-- End of .container -->
-
 
 
 

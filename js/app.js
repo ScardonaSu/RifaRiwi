@@ -7,6 +7,7 @@ import { validar } from "./funciones.js"
 
 
 let contador = 1
+
 const valorElemento = document.querySelector('#valor')
 const incrementar = document.querySelector('#incrementar')
 const decrementar = document.querySelector('#decrementar')
@@ -67,14 +68,6 @@ async function boletaDisabled(e) {
 }
 
 
-
-
-/* 
-<button id="tickets"  data-boleta="${id}" id="${id}" class="numeroBoleta">${numero}</button>
- */
-
-
-
 //Tomar el ID
 /* document.addEventListener('click', (e)=> {
 
@@ -119,8 +112,56 @@ function addParticipante(e) {
     postParticipantes(participante)
     
 
+}
+
+//Busqueda
 
 
+const buquedaBoleto = document.querySelector('#obtenerDatos')
+
+
+buquedaBoleto.addEventListener('click', obtenerDatos)
+
+function obtenerDatos(){
+    let id = document.getElementById('codigoA').value
+
+    fetch('http://localhost:4000/boletos?numero_boleta='+id)
+    .then(response => response.json())
+    .then(data => {
+
+
+
+        document.getElementById("participante").innerText = `NOMBRE: ${data[0].nombre}`
+        document.getElementById("apellido").innerText =`APELLIDO: ${data[0].apellido}`
+        document.getElementById("tel").innerText = `TELEFONO: ${data[0].telefono}`
+        document.getElementById("numBol").innerText = `BOLETO: ${data[0].numero_boleta}`
+
+
+        let ids = document.getElementById('estilosPer')
+        ids.classList.add('busquedaStyles')
+
+        const nom = document.querySelector('#participante')
+        nom.classList.add('busquedaStyles')
+
+        ids.appendChild(nom)
+
+        const tel = document.querySelector('#tel')
+        tel.classList.add('busquedaStyles')
+
+        ids.appendChild(tel)
+
+        const ape = document.querySelector('#apellido')
+        ape.classList.add('busquedaStyles')
+
+        ids.appendChild(ape)
+
+        const ticket = document.querySelector('#numBol')
+        ticket.classList.add('busquedaStyles', 'boletoStyle')
+
+        ids.appendChild(ticket)
+
+
+    });
 }
 
 

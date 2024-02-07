@@ -2,9 +2,9 @@
 
 //Aqui va los endpoint GET / POST / PUT / DELETE
 
-const url = "http://localhost:3000/clientes"
-const urlNuevos = "http://localhost:3000/nuevoParticipante"
-const urlAdmin = 'http://localhost:3000/admin'
+const url = "http://localhost:4000/clientes"
+const urlNuevos = "http://localhost:4000/nuevoParticipante"
+const urlAdmin = 'http://localhost:4000/admin'
 
 
 //POST
@@ -81,4 +81,6 @@ export const geParticipantes = async ()=> {
 
 
 }
+
+
 
